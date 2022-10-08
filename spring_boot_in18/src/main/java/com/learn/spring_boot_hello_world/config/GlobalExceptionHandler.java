@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import javax.naming.spi.ResolveResult;
 import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Global exception handler.
@@ -63,5 +65,8 @@ public class GlobalExceptionHandler {
         // 这里可以屏蔽掉后台的异常栈信息，直接返回"server error"
         return ResResult.error(exception.getLocalizedMessage());
     }
+
+
+
 
 }
